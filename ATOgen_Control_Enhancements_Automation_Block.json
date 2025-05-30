@@ -1,0 +1,102 @@
+[
+  {
+    "control_id": "AC-19(5)",
+    "control_family": "AC",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "CRIS restricts access from mobile devices through managed device policies enforced by MDM. Only government-issued, encrypted mobile devices with VPN and MFA are authorized for access.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "IA-2(1)",
+    "control_family": "IA",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "MFA is required for all user access via Okta. Federal users must authenticate using a PIV card and a unique PIN, fulfilling NIST MFA requirements.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "IA-2(2)",
+    "control_family": "IA",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Remote access requires an additional authentication factor beyond username and password, including biometrics or OTPs delivered via secure channels.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "IA-2(3)",
+    "control_family": "IA",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Access to privileged accounts requires MFA and an additional out-of-band confirmation step before session start, logged and monitored.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "IA-2(11)",
+    "control_family": "IA",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Remote administrative access is gated through jump servers requiring PIV authentication and Okta push approval. No direct access to backend infrastructure is allowed.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "IA-4(4)",
+    "control_family": "IA",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "User identifiers and authentication tokens are protected in transit and at rest using FIPS 140-2 validated cryptographic protocols.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "SC-12(1)",
+    "control_family": "SC",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Cryptographic key establishment in CRIS uses AWS KMS with secure key exchange algorithms including ECC and RSA, validated per FIPS 140-2.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "SC-28(1)",
+    "control_family": "SC",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Sensitive PII and authentication data are encrypted using AES-256 with envelope encryption in S3. Keys are rotated annually.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "SC-39",
+    "control_family": "SC",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Digital information is protected using encryption, DLP tagging, and role-based access restrictions. All data handling complies with FISMA Moderate standards.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  },
+  {
+    "control_id": "SI-3(1)",
+    "control_family": "SI",
+    "enhancement": true,
+    "status": "Implemented",
+    "implementation": {
+      "statement": "Malware protection is automated using CrowdStrike Falcon. Signature updates are applied daily, and scans run continuously on all endpoints.",
+      "responsible_roles": "System Owner, ISSO, System Administrator"
+    }
+  }
+]
